@@ -1,0 +1,49 @@
+Source: laszip
+Section: utils
+Priority: optional
+Maintainer: Matyas Hollmann <matyas.hollmann@melowntech.com>
+Build-Depends: debhelper (>= 9),
+			   dh-autoreconf,
+			   cmake (>= 2.8.11),
+			   chrpath
+Standards-Version: 3.9.8
+Vcs-Browser: https://github.com/melowntech/LASzip
+Vcs-Git: https://github.com/melowntech/LASzip.git
+Homepage: https://github.com/melowntech/LASzip
+
+Package: liblaszip8
+Architecture: any
+Multi-Arch: same
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Lossless LiDAR compression - shared library
+ LASzip quickly turns bulky LAS files into compact LAZ files without
+ information loss.
+ .
+ This package contains the shared library.
+
+Package: liblaszip-api8
+Architecture: any
+Multi-Arch: same
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Lossless LiDAR compression - API shared library
+ LASzip quickly turns bulky LAS files into compact LAZ files without
+ information loss.
+ .
+ This package contains the API shared library.
+
+Package: liblaszip-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends: liblaszip8 (= ${binary:Version}),
+         liblaszip-api8 (= ${binary:Version}),
+         ${misc:Depends}
+Description: Lossless LiDAR compression - development files
+ LASzip quickly turns bulky LAS files into compact LAZ files without
+ information loss.

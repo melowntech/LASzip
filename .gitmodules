@@ -1,0 +1,6 @@
+[submodule "externals/buildsys/common"]
+	path = externals/buildsys/common
+	url = git@github.com:melowntech/buildsys-common.git
+[submodule "LASzip/LASzip"]
+	path = LASzip/LASzip
+	url = git@github.com:LASzip/LASzip.git
