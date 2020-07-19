@@ -29,13 +29,15 @@ CMAKE_FLAGS =  \
 
 # override configuration
 override_dh_auto_configure:
+# apply patches
+	cp debian/patches/CMakeLists.txt LASzip/dll/CMakeLists.txt;
 	dh_auto_configure -- $(CMAKE_FLAGS) ../../LASzip
 
 override_dh_auto_install:
 	dh_auto_install
 
 	# Strip RPATH
-	chrpath --delete debian/liblaszip-dev/usr/lib/*/liblaszip*.so*
+	chrpath --delete debian/*/usr/lib/*/*.so.?.?.?
 
 override_dh_install:
 	dh_install --list-missing
