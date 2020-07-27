@@ -22,6 +22,7 @@ DEB_BUILDDIR=build/obj-$(DEB_BUILD_GNU_TYPE)
 CMAKE_FLAGS =  \
 	-DCMAKE_INSTALL_PREFIX:PATH=$(PREFIX) \
 	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_LIBDIR=lib/$(DEB_HOST_MULTIARCH) \
 
 # default rule; tell debhelper we use CMake
 %:
