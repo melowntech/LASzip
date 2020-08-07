@@ -1,6 +1,6 @@
-laszip (3.4.3) unstable; urgency=medium
+laszip (3.4.4) unstable; urgency=medium
 
-  * Init package.
+  * Initial build of LASzip package based on Git version 3.4.3. 
 
- -- Matyas Hollmann <matyas.hollmann@melown.com>  Sun, 19 Jul 2020 21:54:54 +0200
+ -- Matyas Hollmann <matyas.hollmann@melown.com>  Wed, 29 Jul 2020 15:51:09 +0000
 
